@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #4D42C5;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #30336B;
+}
+
+.title {
+    text-align: center;
+    color: #00CEBF;
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+}
+
+ form {
+     display: flex;
+     justify-content: center;
+ }
+
+.todo_add input {
+    width: 320px;
+    height: 40px;
+    border: 1.8px solid #222f3e;
+    font-size: 28px;
+    vertical-align: middle;
+    padding: 3px;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+.todo_add button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: #341f97;
+    background: #e74c3c;
+    vertical-align: middle;
+    transition: .4s ease-out;
+}
+
+.todo_add button:hover {
+    color: #e74c3c;
+    background: #341f97;
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo {
+    width: 510px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: 2px solid white;
+    transform: translateX(-10px);
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: transform .6s ease-in-out;
+}
+
+.todo_Content {
+    display: inline-block;
+    margin-bottom: 0;
+    color: white;
+}
+
+.fa-trash-alt {
+    float: right;
+    cursor: pointer;
+    margin: 5px;
+    color: white;
+    transition: color .3s linear;
+}
+
+.fa-trash-alt:hover {
+    color: crimson;
+}
+
+@media screen and (max-width: 800px) {
+
+     form {
+         display: block;
+     }
+
+    .todo_add input {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 14px;
+    }
+
+    .todo {
+        max-width: 300px;
+        transform: translateX(3px);
+    }
+
+}
